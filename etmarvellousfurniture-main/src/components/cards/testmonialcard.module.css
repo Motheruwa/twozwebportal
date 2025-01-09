@@ -1,0 +1,44 @@
+.cont{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+}
+.top{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.imgbox{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    background: gray;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.namebox{
+    display: flex;
+    width:calc(100% - 90px);
+    flex-direction: column;
+}
+.stars{
+    color:var(--fcolor);
+}
+.text{
+    width: 95%;
+    text-overflow: ellipsis;
+    white-space:wrap;
+    overflow: hidden;
+    text-align: justify;
+    height: 190px;
+}

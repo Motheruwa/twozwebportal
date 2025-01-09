@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'CustomFont1';
+  src: url('../public/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+  /* Add additional font formats (e.g., woff, woff2) if necessary */
+}
+@font-face {
+  font-family: 'CustomFont2';
+  src: url('../public/Poppins/Poppins-Bold.ttf') format('truetype');
+  /* Add additional font formats (e.g., woff, woff2) if necessary */
+}
+@font-face {
+  font-family: 'CustomFont';
+  src: url('../public/Poppins/Poppins-Regular.ttf') format('truetype');
+  /* Add additional font formats (e.g., woff, woff2) if necessary */
+}
+
+:root{
+  --fcolor:rgb(0, 140, 255);
+  --fcolora:rgba(0, 140, 255,.9);
+  --fcoloraa:rgba(236,131,28,.7);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family:'CustomFont';
+  overflow-x: hidden;
+  /* background-image: url('../public/bg.jpg');
+  background-attachment: fixed;
+  background-size: cover; */
+  background: rgb(245, 245, 245);
+}
+
+::-webkit-scrollbar{
+  width: 3px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(37,58,140);
+}

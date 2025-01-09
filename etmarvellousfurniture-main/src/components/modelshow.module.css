@@ -1,0 +1,17 @@
+.box{
+    width: 100%;
+    height: 50vh;
+}
+.myswiper{
+    width: 100%;
+    height: 100%;
+}
+.slide{
+    width: 90%;
+    height: 90%;
+}
+.zimg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,15 @@
+.cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.box{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    margin-top: 40px;
+}

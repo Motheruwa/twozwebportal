@@ -1,0 +1,173 @@
+.box{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-image: url('../../../public/bg3.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+.cont{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    
+}
+.slider{
+    width: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.lines{
+    width: 3px;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.line{
+    width: 100%;
+    height: 25%;
+}
+.nums{
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.rolnum{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.contentbox{
+    width: calc(100% - 60px);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.content{
+    width: 45%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    z-index: 1;
+    gap: 20px;
+}
+.title{
+    opacity: 1;
+    font-size: 50px;
+    transition: all 1.5s;
+  font-family:'CustomFont1';
+  transform: translateY(0);
+    line-height:90%;
+    color: var(--fcolor);
+}
+.hiddentitle{
+    color: var(--fcolor);
+    opacity: 0;
+    font-size: 80px;
+    transform: translateY(-60%);
+}
+.description{
+    transition: all 1.5s;
+    transform: translateX(0);
+    opacity: 1;
+    height: 200px;
+}
+.hiddendes{
+    transform: translateX(40%);
+    opacity: 0;
+}
+.imgs{
+    width: 70%;
+    height:80%;
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+.showimg{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all .5s;
+    transform: translateX(0);
+    opacity: 1;
+}
+.hideimg{
+    transform: translateX(2%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all .5s;
+}
+
+@media(max-width:800px){
+    .contentbox{
+        flex-direction: column;
+        position: relative;
+    }
+    .content{
+        width:100%;
+        height: calc(100% - 30px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        margin-top: 30px;
+        justify-content: flex-start;
+    }
+    .imgs{
+        width: 100%;
+        height: calc(100% - 30px);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: .8;
+    }
+}
+@media(max-width:600px){
+    .content{
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .title{
+        font-size: 200%;
+        width: 100%;
+        min-height: 30px;
+    }
+    .hiddentitle{
+        font-size: 250%;
+        width: 100%;
+        min-height: 60px;
+    }
+    .imgs{
+        opacity: 1;
+        height: 50%;
+        bottom: 0;
+        position: absolute;
+    }
+    .showimg{
+        scale:1.2;
+    }
+    .cont{
+        height: 60vh;
+    }
+}

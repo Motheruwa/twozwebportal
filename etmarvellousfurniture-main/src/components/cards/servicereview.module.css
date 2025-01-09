@@ -1,0 +1,66 @@
+.cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.titlebox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.title{
+    font-size: 30px;
+}
+.subtitle{
+    text-align: center;
+    opacity: .8;
+}
+.titleline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titleline span{
+    width: 50px;
+    height: 3px;
+    background: rgb(220, 220, 220);
+}
+.titleline span:nth-child(2){
+    background: var(--fcolor);
+}
+.lists{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+.moreservice{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.moreservice a{
+    text-decoration: none;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--fcolor);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.moreservice a:hover{
+    background: white;
+    border: 1px solid var(--fcolor);
+    color: var(--fcolor);
+}

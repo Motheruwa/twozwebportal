@@ -83,6 +83,7 @@ import ModalForm from "./modal/Modal";
 import ServicePage from "./pages/service/ServicePage";
 import ProjectPage from "./pages/project/ProjectPage";
 import AwardPage from "./pages/award/AwardPage";
+import NewsPage from "./pages/news/NewsPage";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -153,6 +154,21 @@ const App = () => {
           label: (
             <Link to={"/award/list"}>
               <MdOutlineWorkHistory /> Award
+            </Link>
+          ),
+        },
+      ],
+    },
+    {
+      key: "10",
+      label: "Manage News",
+      icon: <FaFileSignature size={20} />,
+      children: [
+        {
+          key: "93",
+          label: (
+            <Link to={"/news/list"}>
+              <MdOutlineWorkHistory /> News
             </Link>
           ),
         },
@@ -546,6 +562,7 @@ const App = () => {
                 <Route element={<ServicePage />} path="/service/list" />
                 <Route element={<ProjectPage />} path="/project/list" />
                 <Route element={<AwardPage />} path="/award/list" />
+                <Route element={<NewsPage />} path="/news/list" />
                 <Route element={<PageNotFound />} path="*" />
               </Routes>
             </div>
