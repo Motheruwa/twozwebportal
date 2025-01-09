@@ -13,6 +13,7 @@ import pic6 from '../assets/services/consolt.png'
 import ProductSlide from "../components/cards/ProductSlide";
 import Title from "../components/title/Title";
 import NewsCard from '../components/cards/NewsCard';
+import { BACKENDURL } from '../components/helper/Urls';
 
 const NewsPage = () => {
   const [news, setNews] = useState([]);
@@ -24,7 +25,7 @@ const NewsPage = () => {
   useEffect(() => {
     const fetchNewsData = async () => {
       try {
-        const res = await axios.get('http://localhost:6969/news/all');
+        const res = await axios.get(`${BACKENDURL}/news/all`);
         setNews(res.data.all);
       } catch (error) {
         console.error('Error fetching slide data:', error);

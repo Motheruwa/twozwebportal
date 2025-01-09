@@ -4,6 +4,7 @@ import PageIntro from "../components/cards/PageIntro";
 import styles from "./detailpage.module.css";
 import zimg from "../assets/contact.jpg";
 import Title from "../components/title/Title";
+import { BACKENDURL } from '../components/helper/Urls';
 
 const NewsDetail = () => {
   const { id } = useParams();
@@ -22,7 +23,7 @@ const NewsDetail = () => {
         <Title mainTitle={'Detail'} subTitle={""}/>
           <div className={styles.lists}>
             <div className={styles.contlist}></div>
-            <img className={styles.imgbox} src={`http://localhost:6969/uploads/new/${data.attachment}`} alt={id} style={{objectFit:data.attachment.endsWith('jpg')?'cover':'contain'}} />
+            <img className={styles.imgbox} src={`${BACKENDURL}/uploads/new/${data.attachment}`} alt={id} style={{objectFit:data.attachment.endsWith('jpg')?'cover':'contain'}} />
             <div className={styles.textbox}>
               <span className={styles.detailtitle}>{data.title}</span>
               <span className={styles.detaildes}>{data.description}</span>

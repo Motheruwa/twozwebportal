@@ -3,6 +3,8 @@ import styles from "./productcard.module.css";
 import { NavLink } from "react-router-dom";
 import { FaArrowRight } from 'react-icons/fa'
 import { Image } from "antd";
+import { BACKENDURL } from '../helper/Urls';
+
 const NewsCard = (data) => {
 
   const scrollTop=()=>{
@@ -11,7 +13,7 @@ const NewsCard = (data) => {
   
   return (
     <div className={styles.cont}>
-      <div className={styles.imgbox}><Image className={styles.zimg} src={`http://localhost:6969/uploads/new/${data.attachment}`} alt={data.name}/></div>
+      <div className={styles.imgbox}><Image className={styles.zimg} src={`${BACKENDURL}/uploads/new/${data.attachment}`} alt={data.name}/></div>
       <div className={styles.content}>
       <span className={styles.title}>{data.title}</span>
       <span className={styles.detail}>{data.description}</span>

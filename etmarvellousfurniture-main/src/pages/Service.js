@@ -14,6 +14,7 @@ import pic6 from '../assets/services/consolt.png'
 import ProductSlide from "../components/cards/ProductSlide";
 import Title from "../components/title/Title";
 import Gallerys from "./Gallerys";
+import { BACKENDURL } from '../components/helper/Urls';
 
 const Service = () => {
   const [servies, setservies] = useState([]);
@@ -25,7 +26,7 @@ const Service = () => {
   useEffect(() => {
     const fetchServiceData = async () => {
       try {
-        const res = await axios.get('http://localhost:6969/service/all');
+        const res = await axios.get(`${BACKENDURL}/service/all`);
         setservies(res.data.all);
       } catch (error) {
         console.error('Error fetching slide data:', error);

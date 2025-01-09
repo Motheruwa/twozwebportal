@@ -7,6 +7,7 @@ import pic from '../assets/pics/enat.png'
 import pic2 from '../assets/pics/abay.png'
 import pic3 from '../assets/pics/trainng.png'
 import axios from 'axios';
+import { BACKENDURL } from '../components/helper/Urls';
 
 import Title from '../components/title/Title';
 // import ModelShow from '../components/ModelShow';
@@ -21,7 +22,7 @@ const Gallerys = () => {
   useEffect(() => {
     const fetchProjectData = async () => {
       try {
-        const res = await axios.get('http://localhost:6969/project/all');
+        const res = await axios.get(`${BACKENDURL}/project/all`);
         setgalleryData(res.data.all);
       } catch (error) {
         console.error('Error fetching slide data:', error);

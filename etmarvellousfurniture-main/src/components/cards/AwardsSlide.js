@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay,Navigation  } from 'swiper/modules';
 import axios from 'axios';
+import { BACKENDURL } from '../helper/Urls';
 
 import pic from '../../assets/awards/abay.png'
 import pic2 from '../../assets/awards/addis.png'
@@ -24,7 +25,7 @@ const AwardsSlide = () => {
     useEffect(() => {
       const fetchAwardData = async () => {
         try {
-          const res = await axios.get('http://localhost:6969/award/all');
+          const res = await axios.get(`${BACKENDURL}/award/all`);
           setgalleryData(res.data.all);
         } catch (error) {
           console.error('Error fetching slide data:', error);
@@ -106,7 +107,7 @@ const AwardsSlide = () => {
         {galleryData.map((l)=>(
             <SwiperSlide className={styles.slide} key={l.id} data-id={l.id}>
             <div className={middleItemId===l.id ?styles.activeitembox:styles.itembox} >
-                <Image width={120} height={120} src={`http://localhost:6969/uploads/new/${l.attachment}`} alt={l.name}/>
+                <Image width={120} height={120} src={`${BACKENDURL}/uploads/new/${l.attachment}`} alt={l.name}/>
                 <div className={styles.itemtxt}>
                     <span className={styles.itemtitle}>{l.type}</span>
                     <span className={styles.itemdes}>{l.companyName}</span>

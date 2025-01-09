@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import styles from './introswiper.module.css';
+import { BACKENDURL } from '../helper/Urls';
 
 const IntroSwiper = () => {
   const [slideData, setSlideData] = useState([]);
@@ -14,7 +15,7 @@ const IntroSwiper = () => {
   useEffect(() => {
     const fetchSlideData = async () => {
       try {
-        const res = await axios.get('http://localhost:6969/slider/all');
+        const res = await axios.get(`${BACKENDURL}/slider/all`);
         setSlideData(res.data.all);
       } catch (error) {
         console.error('Error fetching slide data:', error);
@@ -43,7 +44,7 @@ const IntroSwiper = () => {
     >
       {slideData.map((slide, index) => (
         <SwiperSlide className={styles.swiperslide} key={index}>
-          <img src={`http://localhost:6969/uploads/new/${slide.attachment}`} alt={slide.alt} />
+          <img src={`${BACKENDURL}/uploads/new/${slide.attachment}`} alt={slide.alt} />
           <span>{slide.description}</span>
         </SwiperSlide>
       ))}

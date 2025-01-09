@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styles from './topnavbarcontact.module.css';
-import logo from '../../assets/image.png';
+import logo from '../../assets/logo1.png';
 import { FaBusinessTime, FaMapMarkedAlt } from 'react-icons/fa';
 
 const TopNavBarContact = () => {

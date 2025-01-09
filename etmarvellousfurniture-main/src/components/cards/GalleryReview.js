@@ -7,6 +7,7 @@ import pic2 from '../../assets/pics/abay.png'
 import pic3 from '../../assets/pics/trainng.png'
 import Title from '../title/Title'
 import axios from 'axios';
+import { BACKENDURL } from '../helper/Urls';
 
 const GalleryReview = () => {
   const scrollTop=()=>{
@@ -17,7 +18,7 @@ const GalleryReview = () => {
   useEffect(() => {
     const fetchProjectData = async () => {
       try {
-        const res = await axios.get('http://localhost:6969/project/all');
+        const res = await axios.get(`${BACKENDURL}/project/all`);
         setgalleryData(res.data.all);
       } catch (error) {
         console.error('Error fetching slide data:', error);

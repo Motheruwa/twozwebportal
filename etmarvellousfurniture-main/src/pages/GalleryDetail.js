@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import Title from "../components/title/Title";
 import video from "../assets/vids/1.mp4";
+import { BACKENDURL } from '../components/helper/Urls';
 
 const GalleryDetail = () => {
   const { id } = useParams();
@@ -59,7 +60,7 @@ const GalleryDetail = () => {
           </div>
           <div className={styles.lists}>
             <div className={styles.contlist}></div>
-            <img className={styles.imgbox} src={`http://localhost:6969/uploads/new/${data.attachment}`} alt={id} style={{objectFit:'contain'}} />
+            <img className={styles.imgbox} src={`${BACKENDURL}/uploads/new/${data.attachment}`} alt={id} style={{objectFit:'contain'}} />
             <div className={styles.textbox}>
               <span className={styles.detailtitle}>{data.type}</span>
               <span className={styles.detaildes}>{data.description}</span>
