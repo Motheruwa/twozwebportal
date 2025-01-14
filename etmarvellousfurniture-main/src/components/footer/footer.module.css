@@ -21,9 +21,10 @@
     margin: 20px 0;
 }
 .logo{
-    height:60px;
+    height:30px;
     display: flex;
-    width: 320px;
+    width: 200px;
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
     text-decoration: none;

@@ -54,13 +54,13 @@ const Footer = () => {
             
             </div>
             <div className={styles.content}>
-                <div className={styles.copyright}>&copy; {new Date().getFullYear()} Taste Byte. </div>
+                <div className={styles.copyright}>&copy; {new Date().getFullYear()} Gafat Security Service. </div>
                 <div className={styles.social}>
                 <a href="https://www.facebook.com"><FaFacebook/></a>
-                <a href="https://www.facebook.com"><FaInstagram/></a>
-                <a href="https://www.facebook.com"><FaTelegram/></a>
-                <a href="https://www.facebook.com"><FaTiktok/></a>
-                <a href="https://www.facebook.com"><FaLinkedin/></a>
+                <a href="https://www.instagram.com"><FaInstagram/></a>
+                <a href="https://www.telegram.com"><FaTelegram/></a>
+                <a href="https://www.tiktok.com"><FaTiktok/></a>
+                <a href="https://www.linkedln.com"><FaLinkedin/></a>
             </div>
             </div>
         </div>

@@ -15,8 +15,8 @@
 }
 
 :root{
-  --fcolor:rgb(0, 140, 255);
-  --fcolora:rgba(0, 140, 255,.9);
+  --fcolor:rgb(19, 9, 156);
+  --fcolora:rgba(19, 9, 156);
   --fcoloraa:rgba(236,131,28,.7);
 }
 body {

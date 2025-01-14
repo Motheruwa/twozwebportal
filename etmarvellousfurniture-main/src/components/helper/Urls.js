@@ -1,1 +1,1 @@
-export const BACKENDURL='http://localhost:6969'
+export const BACKENDURL='https://portalbackend.gafatsecurityservice.com'
